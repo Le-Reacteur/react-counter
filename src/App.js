@@ -52,6 +52,8 @@ function App() {
           setCounter3(counter3 - 1);
         }}
       />
+
+      <p>Total : {counter1 + counter2 + counter3}</p>
     </div>
   );
 }
