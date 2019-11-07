@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Counter from "./components/Counter";
 import "./App.css";
 
 // 1. Faire la mise en page (html / css)
@@ -10,6 +11,8 @@ function App() {
   // Créer la variable qui va représenter l'état
   // Créer la fonction qui va permettre de modifier l'état
   const [counter1, setCounter1] = useState(0);
+  const [counter2, setCounter2] = useState(0);
+  const [counter3, setCounter3] = useState(0);
 
   // HTML + JS = JSX
   return (
@@ -22,26 +25,33 @@ function App() {
         flexDirection: "column"
       }}
     >
-      <p>{counter1}</p>
-      <div>
-        <button
-          onClick={() => {
-            setCounter1(counter1 - 1);
-            // Ne jamais modifier directement une variable d'état :
-            // counter1 = counter1 - 1;
-            // counter1++;
-          }}
-        >
-          -
-        </button>
-        <button
-          onClick={() => {
-            setCounter1(counter1 + 1);
-          }}
-        >
-          +
-        </button>
-      </div>
+      <Counter
+        value={counter1}
+        onIncrement={() => {
+          setCounter1(counter1 + 1);
+        }}
+        onDecrement={() => {
+          setCounter1(counter1 - 1);
+        }}
+      />
+      <Counter
+        value={counter2}
+        onIncrement={() => {
+          setCounter2(counter2 + 1);
+        }}
+        onDecrement={() => {
+          setCounter2(counter2 - 1);
+        }}
+      />
+      <Counter
+        value={counter3}
+        onIncrement={() => {
+          setCounter3(counter3 + 1);
+        }}
+        onDecrement={() => {
+          setCounter3(counter3 - 1);
+        }}
+      />
     </div>
   );
 }
