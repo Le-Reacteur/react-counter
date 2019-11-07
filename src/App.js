@@ -14,6 +14,8 @@ function App() {
   const [counter2, setCounter2] = useState(0);
   const [counter3, setCounter3] = useState(0);
 
+  const total = counter1 + counter2 + counter3;
+
   // HTML + JS = JSX
   return (
     <div
@@ -26,6 +28,7 @@ function App() {
       }}
     >
       <Counter
+        total={total}
         value={counter1}
         onIncrement={() => {
           setCounter1(counter1 + 1);
@@ -35,6 +38,7 @@ function App() {
         }}
       />
       <Counter
+        total={total}
         value={counter2}
         onIncrement={() => {
           setCounter2(counter2 + 1);
@@ -44,6 +48,7 @@ function App() {
         }}
       />
       <Counter
+        total={total}
         value={counter3}
         onIncrement={() => {
           setCounter3(counter3 + 1);
@@ -53,7 +58,7 @@ function App() {
         }}
       />
 
-      <p>Total : {counter1 + counter2 + counter3}</p>
+      <p>Total : {total}</p>
     </div>
   );
 }

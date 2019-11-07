@@ -8,17 +8,17 @@ const renderDecrement = props => {
 };
 
 const renderIncrement = props => {
-  if (props.value < 10) {
+  if (props.value < 10 && props.total < 18) {
     return <button onClick={props.onIncrement}>+</button>;
   }
   return null;
 };
 
 const Counter = props => {
-  console.log(props.value); // 0
-  console.log(props.onIncrement); // function
-  console.log(props.onDecrement); // function
-
+  // console.log(props.value); // 0
+  // console.log(props.total); // ?
+  // console.log(props.onIncrement); // function
+  // console.log(props.onDecrement); // function
   return (
     <>
       <p>{props.value}</p>
@@ -49,7 +49,7 @@ const Counter = props => {
 //       {props.value > 0 ? (
 //         <button onClick={props.onDecrement}>-</button>
 //       ) : null}
-//       {props.value < 10 ? (
+//       {props.value < 10 && props.total < 18 ? (
 //         <button onClick={props.onIncrement}>+</button>
 //       ) : null}
 //     </div>
