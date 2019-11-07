@@ -1,6 +1,6 @@
 # React Counter
 
-## Quick install
+## Quick start
 
 ```bash
 npm install
