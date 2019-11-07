@@ -11,6 +11,6 @@ npm start
 
 ```js
 const App = () => {
-  return <div />;
+  return null;
 };
 ```
